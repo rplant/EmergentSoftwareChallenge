@@ -1,0 +1,29 @@
+<form>
+  <div align="center">
+    <h2>Version Search</h2>
+    <div class="form-group input-group mb-3" style="width: 200px">
+      <input type="text" class="form-control" id="form12" [(ngModel)]="searchQuery" placeholder="Search Versions">
+      <button type="button" class="btn btn-primary" (click)="searchVersions()">
+        <i class="glyphicon glyphicon-search">Search</i>
+      </button>
+    </div>
+    <div class="table">
+      <div class="row" *ngFor="let v of versions;let i = index;">
+        <div class="col-4">
+          {{ i+1 }}
+        </div>
+        <div class="col-4">
+          {{ v.name }}
+        </div>
+        <div class="col-4">
+          {{ v.version }}
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
